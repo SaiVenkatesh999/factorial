@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factorial-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: factorial
+  template:
+    metadata:
+      labels:
+        app: factorial
+    spec:
+      containers:
+      - name: factorial
+        image: saivenkatesh09/factorial:latest
+        ports:
+        - containerPort: 9090
+

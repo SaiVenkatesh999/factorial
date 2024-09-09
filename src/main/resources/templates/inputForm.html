@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Input Form</title>
+    <style>
+        .input-box {
+            background-color: #f0f8ff; /* Light Blue Background */
+            color: #00008b; /* Dark Blue Text */
+            border: 2px solid #8a2be2; /* Violet Border */
+            padding: 10px;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background-color: #8a2be2; /* Violet Background */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #5d3fd3; /* Darker Violet on Hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter a Value:</h2>
+    <form action="/submit" method="post">
+        <input type="text" name="inputValue" class="input-box" placeholder="Enter a value" required>
+        <br><br>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</body>
+</html>

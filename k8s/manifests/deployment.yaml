@@ -16,7 +16,7 @@ spec:
       - name: factorial
         image: saivenkatesh09/factorial:latest
         ports:
-        - containerPort: 9090
+        - containerPort: 8080
         resources:
           requests:
             cpu: "250m"
@@ -27,13 +27,13 @@ spec:
         readinessProbe:
           httpGet:
             path: /actuator/health
-            port: 9090
+            port: 8080
           initialDelaySeconds: 10
           periodSeconds: 10
         livenessProbe:
           httpGet:
             path: /actuator/health
-            port: 9090
+            port: 8080
           initialDelaySeconds: 20
           periodSeconds: 20
 

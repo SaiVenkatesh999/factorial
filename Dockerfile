@@ -7,7 +7,11 @@ WORKDIR /app
 # Copy the packaged JAR file into the container
 COPY target/factorial-0.0.1-SNAPSHOT.jar /app/factorial.jar
 
+<<<<<<< HEAD
 # Expose the container's port 9090
+=======
+# Expose the container's port 8080
+>>>>>>> acb5234 (updated)
 EXPOSE 8080
 
 # Run the JAR file

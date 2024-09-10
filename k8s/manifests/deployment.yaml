@@ -17,4 +17,23 @@ spec:
         image: saivenkatesh09/factorial:latest
         ports:
         - containerPort: 9090
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "512Mi"
+          limits:
+            cpu: "500m"
+            memory: "1Gi"
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 9090
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 9090
+          initialDelaySeconds: 20
+          periodSeconds: 20
 

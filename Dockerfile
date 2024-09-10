@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/factorial-0.0.1-SNAPSHOT.jar /app/factorial.jar
 
 # Expose the container's port 9090
-EXPOSE 9090
+EXPOSE 8080
 
 # Run the JAR file
 ENTRYPOINT ["java", "-jar", "/app/factorial.jar"]
